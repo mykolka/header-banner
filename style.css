@@ -1,0 +1,156 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "OpenSans-Regular"; 
+}
+header{
+	margin: 0 auto;
+	width: 100vw;
+	max-width: 1440px;
+	height: 50px;
+	padding: 0 20px;
+	background-color: grey;	
+}
+.wrapper{
+	width: 100%;
+	height: 100%;
+	max-width: 1120px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+}
+a{
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	text-transform: uppercase;
+}
+li{
+	list-style: none;
+}
+.menu{
+	min-width: 70%;
+	height: 100%;
+}
+.menuList{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.menuList>li{
+	position: relative;
+}
+.menuList>li>ul{
+	position: absolute;
+	top: 18px;
+	left: 0;
+	padding-top: 20px;
+	width: 250px;
+}
+.menuList>li:hover .productsList {
+	display: block;
+}
+.hover{display: none;}
+.productsList{
+	display: none;
+	padding-top: 15px;
+}
+.productsList>li{
+	background-color: rgb(182, 179, 174);
+	padding: 0 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+}
+.productsList>li:hover {
+	background-color: rgb(209, 205, 199);
+}
+.productsList>li:hover .hover{
+	display: inline-block;
+}
+.productsList>li:hover .noHover{
+	display: none;
+}
+.description{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 300px;
+	padding: 10px;
+	background-color: rgb(216, 199, 174);
+}
+.productsList>li:hover .description{
+	display: block;
+}
+.infoBox {
+	display: none;
+	width: 300px;
+	position: absolute;
+	top: 23px;
+	left: 0;
+	padding-top: 15px;
+}
+.infoBox>p, .infoBox>ul{
+	background-color: rgb(182, 179, 174);
+	padding-bottom: 5px;
+}
+.infoBox>p{
+	text-align: justify;
+	padding: 5px;
+}
+.infoBox>ul>li{
+	list-style-image: url('icons/arrow.png');
+	list-style-position: inside;
+	padding: 0 5px;
+}
+.infoBox>ul>li:hover {
+	background-color: rgb(209, 205, 199);
+	cursor: pointer;
+}
+.delivery:hover .infoBox{
+	display: block;
+}
+.login {
+	color: rgb(58, 54, 47);
+}
+.login:hover {
+	cursor: pointer;
+}
+
+#bannerBox{
+	margin: 0 auto;
+	height: 90vh;
+	min-height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+#btn{
+	cursor: pointer;
+}
+.close{
+	transform: rotate(45deg);
+	position: absolute;
+	top: -5px;
+	right: 5px;
+	font-size: 26px;
+}
+.close:hover {
+	cursor: pointer;	
+}
+
+@font-face {
+	font-family: "OpenSans-Regular";  
+	src: url("fonts/OpenSans-Regular.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: normal;
+ }
